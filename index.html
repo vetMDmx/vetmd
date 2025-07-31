@@ -35,9 +35,18 @@
       justify-content: center;
     }
 
+    .logo-header {
+      display: flex;
+      align-items: left;
+      justify-content: flex-start;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
     .paw-logo {
       width: 180px;
+      height: auto;
     }
+
 
     .services-box {
       background: url(Resources/pawBG.png);
@@ -112,19 +121,22 @@
       }
 
       .paw-logo {
-        width: 140px;
+        width: 160px;
       }
+      
     }
   </style>
 </head>
 <body>
 
   <header>
-    <h1>Clínica Veterinaria VetMD</h1>
+      <div class="logo-header">
+        <img src="Resources/vetMD_clinica1.png" alt="Logo VetMD" class="paw-logo"> <!--Logo vetmd ;)-->
+        <h1>Clínica Veterinaria VetMD</h1>
+        </div>
   </header>
 
   <div class="container">
-    <img src="Resources/vetMD_clinica1.png" alt="Logo VetMD" class="paw-logo">
 
     <div class="services-box">
       <button class="service-button" onclick="window.location.href='Consultas.html'">
