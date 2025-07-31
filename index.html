@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Clínica Veterinaria VetMD</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #000000;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    header {
+      text-align: center;
+      margin: 20px 0;
+    }
+
+    header h1 {
+      font-size: 2.5em;
+      letter-spacing: 1px;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      gap: 40px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .paw-logo {
+      width: 180px;
+    }
+
+    .services-box {
+      background: url(Resources/pawBG.png);
+      background-size: cover;
+      border-radius: 10px;
+      padding: 30px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      max-width: 600px;
+      box-shadow: 0 0 10px rgba(255,255,255,0.1);
+    }
+
+    .service-button {
+      background-color: rgba(255, 255, 255, 0.85);
+      border: none;
+      padding: 20px;
+      border-radius: 10px;
+      text-align: center;
+      cursor: pointer;
+      transition: transform 0.2s, background-color 0.3s;
+    }
+
+    .service-button:hover {
+      transform: scale(1.05);
+      background-color: #dff6ff;
+    }
+
+    .service-button i {
+      font-size: 2em;
+      color: #2c3e50;
+      margin-bottom: 8px;
+    }
+
+    .service-button p {
+      margin: 0;
+      color: #2c3e50;
+      font-weight: bold;
+    }
+
+    .social {
+      margin: 40px 0 20px;
+      display: flex;
+      gap: 20px;
+      font-size: 1.5em;
+    }
+
+    .social a {
+      color: white;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    .social a:nth-child(1):hover {
+      color: #bc1a6b;
+    }
+    .social a:nth-child(2):hover {
+      color: #1a5bbc;
+    }
+     .social a:nth-child(3):hover {
+      color: #1abc9c;
+    }
+
+    @media (max-width: 768px) {
+      .services-box {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .container {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .paw-logo {
+        width: 140px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Clínica Veterinaria VetMD</h1>
+  </header>
+
+  <div class="container">
+    <img src="Resources/vetMD_clinica1.png" alt="Logo VetMD" class="paw-logo">
+
+    <div class="services-box">
+      <button class="service-button" onclick="window.location.href='Consultas.html'">
+        <i class="fas fa-stethoscope"></i>
+        <p>Consultas</p>
+      </button>
+      
+      <button class="service-button" onclick="window.location.href='Esteticas.html'">
+        <i class="fas fa-cut"></i>
+        <p>Estética</p>
+      </button>
+
+      <button class="service-button" onclick="window.location.href='Vacunacion.html'">
+        <i class="fas fa-syringe"></i>
+        <p>Vacunas</p>
+      </button>
+
+
+      <button class="service-button" onclick="window.location.href='Imagenologia.html'">
+        <i class="fas fa-bone"></i>
+        <p>Imagenologia</p>
+      </button>
+
+      <button class="service-button" onclick="window.location.href='Cirugias.html'">
+        <i class="fas fa-hospital"></i>
+        <p>Cirugías</p>
+      </button>
+
+      <button class="service-button" onclick="window.location.href='Farmacia.html'">
+        <i class="fas fa-pills"></i>
+        <p>Farmacia</p>
+      </button>
+    </div>
+  </div>
+
+  <div class="social">
+    <a href="https://www.instagram.com/vetmd.mx/"><i class="fab fa-instagram"></i></a>
+    <a href="https://www.facebook.com/vetmd.mx/"><i class="fab fa-facebook"></i></a>
+    <a href="https://wa.me/525574712981"><i class="fab fa-whatsapp"></i></a>
+  </div>
+
+    <section id="body">
+    <h2>Domicilio</h2>
+    <div class="contact">
+      <p><strong>Dirección:</strong> Av. Plutarco Elias Calles #1364-A (Casi esquina eje 6), Ciudad de México, MX</p>
+      <p><strong>Teléfono:</strong> (55) 5532-1894</p>
+      <p><strong>Email:</strong> vetmd@hotmail.com </p>
+      <p><strong>Horario:</strong> Lunes a Sábado, 10:00 AM - 5:00 PM</p>
+    </div>
+  </section>
+  <!-- <h3 align="center"> mira bien hijo de tu puta madre, <br>
+  soy Mencho wey, <br> 
+  relaja a tu puta gente a la verga.</h3> -->
+
+</body>
+</html>
