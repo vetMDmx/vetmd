@@ -6,10 +6,22 @@
   <title>Clínica Veterinaria VetMD</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <style>
-    body {
+
+.page-card {
+  max-width: 1000px;
+  margin: 40px auto;
+  background-color: rgba(31, 31, 31, 0.95); /* gris claro con un poco de transparencia */
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* sombra suave */
+}
+      body {
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
-      background-color: #000000;
+      background: linear-gradient(135deg, #0a3b63, #000000);
+      background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
       color: white;
       display: flex;
       flex-direction: column;
@@ -29,7 +41,7 @@
     .container {
       display: flex;
       flex-direction: row;
-      align-items: flex-start;
+      align-items: flex-start; 
       gap: 40px;
       flex-wrap: wrap;
       justify-content: center;
@@ -88,8 +100,11 @@
     }
 
     .social {
-      margin: 40px 0 20px;
       display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 20px;
+      margin: 40px 0 20px;
       gap: 30px;
       font-size: 3.5em;
     }
@@ -102,19 +117,31 @@
 
     .social a:nth-child(1):hover {
       color: #bc1a6b;
-    }
+    } 
     .social a:nth-child(2):hover {
       color: #1a5bbc;
     }
      .social a:nth-child(3):hover {
       color: #1abc9c;
     }
+    .social a:nth-child(4):hover  {
+      color: #ca1149;
+    }
+    .social a:nth-child(5):hover  {
+    color: #ff0909;
+   }
 
     @media (max-width: 768px) {
       .services-box {
         grid-template-columns: repeat(2, 1fr);
       }
-
+      .page-card {
+      background: none;
+      box-shadow: none;
+      padding: 10px;
+       border-radius: 0;
+       max-width: 100%;
+      }
       .container {
         flex-direction: column;
         align-items: center;
@@ -134,13 +161,30 @@
       }
       
     }
+
+    @keyframes bounce {
+  0%   { transform: scale(1); }
+  30%  { transform: scale(1.2); }
+  50%  { transform: scale(0.95); }
+  70%  { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+.paw-logo.bouncing {
+  animation: bounce 0.5s ease;
+}
+
   </style>
+  <!-- -->
+   <!-- Linea 104, 107 y 110 colores de iconos redes sociales en orden ascendiente-->
+    <!-- linea 113 y 116 desactivadas hasta nuevo aviso-->
 </head>
 <body>
+    <div class="page-card">
 
   <header>
       <div class="logo-header">
-        <img src="Resources/vetMD_clinica1.png" alt="Logo VetMD" class="paw-logo"> <!--Logo vetmd ;)-->
+        <img src="Resources/vetMD_clinica1.png" alt="Logo VetMD" id="paw-logo" class="paw-logo"> <!--Logo vetmd ;)-->
         <h1>Clínica Veterinaria VetMD</h1>
         </div>
   </header>
@@ -185,6 +229,9 @@
     <a href="https://www.instagram.com/vetmd.mx/"><i class="fab fa-instagram"></i></a>
     <a href="https://www.facebook.com/vetmd.mx/"><i class="fab fa-facebook"></i></a>
     <a href="https://wa.me/525574712981"><i class="fab fa-whatsapp"></i></a>
+   <!--<a href="https://www.tiktok.com"><i class="fab fa-tiktok"></i></a>
+    <a href="https://www.youtube.com"><i class="fab fa-youtube"></i></a> -->
+    <!-- lineas desactivadas por ausencia de redes sociales-->
   </div>
 
     <section id="body">
@@ -196,9 +243,38 @@
       <p><strong>Horario:</strong> Lunes a Sábado, 10:00 AM - 5:00 PM</p>
     </div>
   </section>
-  <!-- <h3 align="center"> mira bien hijo de tu puta madre, <br>
-  soy Mencho wey, <br> 
-  relaja a tu puta gente a la verga.</h3> -->
+</div>
+<script>
+  const pawLogo = document.getElementById('paw-logo');
 
+const animalSounds = [
+  'Resources/sounds/woof1.mp3', 
+  'Resources/sounds/meow1.mp3',
+  'Resources/sounds/woof2.mp3',
+  'Resources/sounds/meow2.mp3',
+  'Resources/sounds/meow3.mp3'
+];
+let currentSoundIndex = 0; //Borrar despues del testing prro :v
+
+pawLogo.addEventListener('click', () => {
+  pawLogo.classList.add('bouncing');
+  setTimeout(() => {
+    pawLogo.classList.remove('bouncing');
+  }, 500);
+
+  //const randomIndex = Math.floor(Math.random() * animalSounds.length);
+  //const sound = new Audio(animalSounds[randomIndex]);
+  //sound.play();
+
+     // SONIDO EN ORDEN - REACTIVAR LINEAS DESPUES DE TESTEAR  
+     const sound = new Audio(animalSounds[currentSoundIndex]);
+    sound.play();
+
+    currentSoundIndex++;
+    if (currentSoundIndex >= animalSounds.length) {
+      currentSoundIndex = 0; 
+    } 
+});
+</script>
 </body>
 </html>
