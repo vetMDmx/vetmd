@@ -10,10 +10,10 @@
 .page-card {
   max-width: 1000px;
   margin: 40px auto;
-  background-color: rgba(31, 31, 31, 0.95); /* gris claro con un poco de transparencia */
+  background-color: rgba(36, 28, 28, 0.95); 
   padding: 40px;
   border-radius: 20px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* sombra suave */
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.404);
 }
       body {
       margin: 0;
@@ -36,6 +36,7 @@
     header h1 {
       font-size: 2.5em;
       letter-spacing: 1px;
+      justify-content: center;
     }
 
     .container {
@@ -136,10 +137,10 @@
         grid-template-columns: repeat(2, 1fr);
       }
       .page-card {
-      background: none;
+      background: rgba(36, 28, 28, 0.95); 
       box-shadow: none;
-      padding: 10px;
-       border-radius: 0;
+      padding: 0px;
+       border-radius: 1.5em;
        max-width: 100%;
       }
       .container {
@@ -233,7 +234,8 @@
     <a href="https://www.youtube.com"><i class="fab fa-youtube"></i></a> -->
     <!-- lineas desactivadas por ausencia de redes sociales-->
   </div>
-
+</div>
+<div class="page-card">
     <section id="body">
     <h2>Domicilio</h2>
     <div class="contact">
@@ -251,10 +253,9 @@ const animalSounds = [
   'Resources/sounds/woof1.mp3', 
   'Resources/sounds/meow1.mp3',
   'Resources/sounds/woof2.mp3',
-  'Resources/sounds/meow2.mp3',
-  'Resources/sounds/meow3.mp3'
+  'Resources/sounds/meow2.mp3'
 ];
-let currentSoundIndex = 0; //Borrar despues del testing prro :v
+let currentSoundIndex = 0; //alt.val - skip el primer audio file //Borrar despues del testing prro :v
 
 pawLogo.addEventListener('click', () => {
   pawLogo.classList.add('bouncing');
