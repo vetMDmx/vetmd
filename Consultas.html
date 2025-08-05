@@ -1,9 +1,103 @@
-<html>  
+<!DOCTYPE html>
+<html lang="es">
     <head>
-        <title>VetMD - Consultas </title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>VetMD - Consultas</title>
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        .page-card {
+  max-width: 100%;
+  max-height: auto;
+    background-color: rgba(36, 28, 28, 0.95); 
+  padding: 5px;
+  border-radius: 20px;
+}
+    .info-card {
+        max-width: 100%;
+        margin: 0;
+        background-color: #ffffff;
+        padding: 20px;
+        border-radius: 20px;;
+    }
+        header {
+            text-align: center;
+            margin: 20px 0;
+            font-family: 'Segoe UI', sans-serif;
+            color: #ffffff;
+        }
+        .logo-header {
+        display: flex;
+        align-items: left;
+        justify-content: flex-start;
+        gap: 20px;
+        flex-wrap: wrap; 
+        }
+        .paw-logo {
+            width: 100px;
+            height: auto;
+        }
+         .services-box {
+      background-color: #41535a;
+      background-size: cover;
+      border-radius: 10px;
+      padding: 30px;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+      max-width: 100%;
+      box-shadow: 0 0 10px rgba(255,255,255,0.1);
+    }
+
+    .service-button {
+      background-color: rgba(255, 255, 255, 0.85);
+      border: none;
+      padding: 20px;
+      border-radius: 10px;
+      text-align: center;
+      cursor: pointer;
+      transition: transform 0.2s, background-color 0.3s;
+    }
+
+    .service-button:hover {
+      transform: scale(1.05);
+      background-color: #dff6ff;
+    }
+    </style>
+
     </head>
     <body>
-        <h1>Consultas  </h1>
+        <div class="page-card">  
+       <header>
+      <div class="logo-header">
+        <img src="Resources/vetMD_clinica1.png" alt="Logo VetMD" id="paw-logo" class="paw-logo">
+        <h1> Clínica veterinaria VetMD - Consultas.</h1> 
+        </div>
+    </div>
+  </header>
+
+    <div class="info-card">
+        <div class="services-box">
+      <button class="service-button" onclick="window.location.href='Consultas.html'">
+        <i class="fas fa-cloud"></i>
+        <p>Agendar cita en línea.</p>
+      </button>
+      
+      <button class="service-button" onclick="window.location.href='https://wa.me/525574712981?text= Buen día, me gustaría agendar una cita para consulta.'">
+        <i class="fab fa-whatsapp" ></i>
+        <p>Agendar cita en WhatsApp.</p>
+      </button>
+    </div>
+    </div>
+<script>
+  const pawLogo = document.getElementById('paw-logo');
+
+
+pawLogo.addEventListener('click', () => {
+    window.location.href="index.html"
+    } 
+);
+</script>
         
     </body>
 </html>
